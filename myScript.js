@@ -1,4 +1,12 @@
-//FUNCTION FOR THE RANDOM COMPUTER CHOICE//
+
+//FUNCTION FOR PLAYROUND (WIN OR LOSE)//
+
+
+
+function playRound() 
+{
+
+  //FIRST RANDOM COMPUTER CHOICE IS DEFINED//
 
   let computerChoice = Math.random();
   
@@ -23,20 +31,13 @@
   
   function getComputerChoice()
   {
-    return computerChoice;
+   return  computerChoice;
   }
       
   console.log(getComputerChoice());
 
 
-//FUNCTION FOR PLAYROUND (WIN OR LOSE)//
-
-
-
-
-
-function playRound() 
-{
+//NOW ALERTS FOR THE OUTCOME ARE DEFINED AND POINTS ARE ASSIGNED TO WINNER//
 
   const playerChoice = prompt ("Rock, paper, or scissors").toLowerCase();
   
@@ -101,9 +102,9 @@ function playRound()
 
 
   else
-  if
   (undefined)
   {
+    alert ("I do not know that word!");
   return ("");
   } 
 
