@@ -1,7 +1,31 @@
-<script src="myScript.js"></script>
+playerChoice = playerChoice.toLowerCase();
 
 
-function playRound (playerSelection, computerSelection) {
-    let rockWin = "You win, rock beats scissors"
-     return rockWin;
- }
+Array(2).fill(1).forEach(()=>{
+  playRound();
+})
+
+
+function game()
+{
+
+}
+
+function results(){
+  
+if (cWin > playerWin){
+  alert ("You lost!");
+  }
+  
+  else 
+  if (cWin < playerWin)
+  {
+    alert ("You won!")
+  }
+  
+  else (cWin==playerWin)
+  {
+  alert ("It's a tie!!!")
+  }
+  }
+  
