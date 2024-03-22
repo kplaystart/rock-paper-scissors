@@ -2,7 +2,6 @@
 //FUNCTION FOR PLAYROUND (WIN OR LOSE)//
 
 
-
 function playRound() 
 {
 
@@ -41,77 +40,70 @@ function playRound()
 
   const playerChoice = prompt ("Rock, paper, or scissors").toLowerCase();
   
-  
-    if 
-  (playerChoice==computerChoice)
-  {
-    alert ("It is a tie");
-  }
 
-          
- if (playerChoice == "rock") 
- {
-  if
-   (computerChoice == "paper")
-   {
- alert ("You lose! Paper beats rock.");
+if (playerChoice === "rock" && computerChoice === "paper")
+{
+  alert ("You lose! Paper beats rock.")
  return ++compWin;
-}
-  
-  else 
-  if (computerChoice == "scissors") 
-  {
-      alert ("You win! rock beats scissors");
- return ++playerWin;
-    }
-    }
+ }
 
-  if  (playerChoice == "paper") 
-  {
-    if (computerChoice == "scissors")
-     {
-      alert ("You lose! Scissors beats paper.");
+else 
+if (playerChoice === "rock" && computerChoice === "scissors") 
+{
+    alert ("You win! rock beats scissors");
+return ++playerWin;
+  }
+  
+else
+if  (playerChoice === "paper" && computerChoice === "scissors") 
+   {
+    alert ("You lose! Scissors beats paper.");
+return ++compWin;
+  }
+
+else
+if (playerChoice === "paper" && computerChoice === "rock") 
+{
+    alert ("You win! Paper beats rock.");
+     return ++playerWin;
+  }
+
+else
+if (playerChoice === "scissors" && computerChoice === "paper")
+{
+    alert ("You win! Scissors beats paper.");
+     return ++playerWin;
+  }
+
+else 
+if
+(playerChoice === "scissors" && computerChoice === "rock") 
+{
+    alert ("You lose! Rock beats scissors.");
   return ++compWin;
-    }
-
-  else
-  if (computerChoice == "rock") 
-  {
-      alert ("You win! Paper beats rock.");
-       return ++playerWin;
-    }
   }
 
-  
-  if (playerChoice == "scissors")
-  {
-    if (computerChoice = "paper")
-    {
-      alert ("You win! Scissors beats paper.");
-       return ++playerWin;
-    }
-
-  else 
-  if
-  (computerChoice == "rock") 
-  {
-      alert ("You lose! Rock beats scissors.");
-    return ++compWin;
-    }
-  }
-
-
-  else
-  (undefined)
-  {
-    alert ("I do not know that word!");
-  return ("");
-  } 
-
+else
+if 
+(playerChoice==computerChoice)
+{
+  alert ("It is a tie");
 }
+    
+
+else
+if
+(undefined)
+{
+  alert ("I do not know that word!");
+return ("");
+} 
+}
+
 
 let compWin = 0;
 let playerWin = 0;
+
 
 //FUNCTION PLAYGAME//
 
@@ -123,7 +115,10 @@ function playGame() {
 }
 playGame();
 
+
 //GET AND DISPLAY RESULTS//
+
+
 
 function results(){
   
@@ -144,11 +139,4 @@ function results(){
     }
 
     console.log(playRound());
-    console.log(results())
-
-
-
-
-
-
-
+    console.log(results());
