@@ -90,7 +90,6 @@ if
   alert ("It is a tie");
 }
     
-
 else
 if
 (undefined)
@@ -117,7 +116,6 @@ playGame();
 
 
 //GET AND DISPLAY RESULTS//
-
 
 
 function results(){
