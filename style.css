@@ -1,0 +1,42 @@
+body {
+   
+}
+
+#title {
+    color: cornflowerblue;
+    font-size: 44px;
+    font-family: helvetica;
+    align-self: center;
+}
+
+.buttons {
+border-width: 2px;
+border-color: pink;
+background-color: cornflowerblue;
+color: whitesmoke;
+border-radius: 14px;
+font-size: 22px;
+margin-bottom: 22px;
+padding: 11px;
+margin-left: 422px;
+margin-right: 422px;
+
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    justify-items:center;
+    justify-content: center;
+    padding-top: 55px;
+
+  
+}
+
+
+.displays {
+    display: flex;
+   justify-content: space-evenly;
+   padding-top: 55px;
+}
+    

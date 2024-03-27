@@ -1,140 +1,140 @@
 
-//FUNCTION FOR PLAYROUND (WIN OR LOSE)//
+const totalText = document.querySelector("#totalText");
+const buttons = document.querySelectorAll(".buttons");
+let player;
+let result;
+let compWin = 0;
+let playerWin = 0;
+let rounds  = 0 ;
 
 
-function playRound() 
+buttons.forEach ((button) => {
+    button.addEventListener("click", () => 
 {
+player = button.id;
+ checkWinner (); 
+  updateScore();
+  endGame ()
 
-  //FIRST RANDOM COMPUTER CHOICE IS DEFINED//
 
-  let computerChoice = Math.random();
+
+});
+
+
+
+
+function updateScore(){
+  const playerText = document.querySelector("#playerText");
+const computerText = document.querySelector("#computerText");
+  playerText.textContent = "Player: " + playerWin.toString();
+computerText.textContent = "Computer: " + compWin.toString();
+}
   
+
+  function checkWinner() 
+{
+  let computer = Math.random()
+
+if (computer <= 0.33) 
+{
+ computer = "rock"
+}
+
+else 
+if (computer >= 0.34 && computer <= 0.66) 
+{
+computer = "paper"
+}
+
+else
+if (computer >= 0.67)
+{
+ computer = "scissors"
+}
+
+
+function getComputerTurn ()
+{return computer;}
+
+console.log(getComputerTurn())
+
+
+
+  if (player === "rock" && computer === "paper")
   {
-      if (computerChoice <= 0.33) 
-      {
-      computerChoice = "rock"
+    
+    alert ("You lose! Paper beats rock.")
+   compWin++;
+   return;
+   }
+  
+  else 
+  if (player === "rock" && computer === "scissors") 
+  {
+      alert ("You win! rock beats scissors");
+  playerWin++;
+  return;
+    }
+    
+  else
+  if  (player === "paper" && computer === "scissors") 
+     {
+      alert ("You lose! Scissors beats paper.");
+   compWin++;
+   return;
+    }
+  
+  else
+  if (player === "paper" && computer === "rock") 
+  {
+      alert ("You win! Paper beats rock.");
+       playerWin++;
+       return;
+    }
+  
+  else
+  if (player === "scissors" && computer === "paper")
+  {
+      alert ("You win! Scissors beats paper.");
+       playerWin++;
+       return;
     }
   
   else 
-  if (computerChoice <= 0.66) 
+  if
+  (player === "scissors" && computer === "rock") 
   {
-    computerChoice = "paper"
-  }
+      alert ("You lose! Rock beats scissors.");
+    compWin++;
+    return;
+    }
   
   else
-  if (computerChoice >= 0.67)
-   {
-  computerChoice = "scissors"
-  }
-  }
-  
-  function getComputerChoice()
+  if 
+  (player==computer)
   {
-   return  computerChoice;
-  }
-      
-  console.log(getComputerChoice());
-
-
-//NOW ALERTS FOR THE OUTCOME ARE DEFINED AND POINTS ARE ASSIGNED TO WINNER//
-
-  const playerChoice = prompt ("Rock, paper, or scissors").toLowerCase();
+    alert ("It is a tie");
+    rounds++;
+    return;
   
-
-if (playerChoice === "rock" && computerChoice === "paper")
-{
-  alert ("You lose! Paper beats rock.")
- return ++compWin;
- }
-
-else 
-if (playerChoice === "rock" && computerChoice === "scissors") 
-{
-    alert ("You win! rock beats scissors");
-return ++playerWin;
   }
-  
-else
-if  (playerChoice === "paper" && computerChoice === "scissors") 
-   {
-    alert ("You lose! Scissors beats paper.");
-return ++compWin;
-  }
-
-else
-if (playerChoice === "paper" && computerChoice === "rock") 
-{
-    alert ("You win! Paper beats rock.");
-     return ++playerWin;
-  }
-
-else
-if (playerChoice === "scissors" && computerChoice === "paper")
-{
-    alert ("You win! Scissors beats paper.");
-     return ++playerWin;
-  }
-
-else 
-if
-(playerChoice === "scissors" && computerChoice === "rock") 
-{
-    alert ("You lose! Rock beats scissors.");
-  return ++compWin;
-  }
-
-else
-if 
-(playerChoice==computerChoice)
-{
-  alert ("It is a tie");
-}
-    
-else
-if
-(undefined)
-{
-  alert ("I do not know that word!");
-return ("");
-} 
 }
 
+})
 
-let compWin = 0;
-let playerWin = 0;
-
-
-//FUNCTION PLAYGAME//
-
-function playGame() {
-
-  for(let i=0;i<4;i++) {
-      console.log(playRound());
-  }
-}
-playGame();
+function endGame (){
+  if ((compWin+playerWin+rounds===5) && (compWin > playerWin))
+  alert ("GAME IS OVER, the winner is: computer");
 
 
-//GET AND DISPLAY RESULTS//
+  if ((compWin+playerWin+rounds===5) && (compWin < playerWin))
+  alert ("GAME IS OVER, the winner is: player");
+
+  if ((compWin+playerWin+rounds===5) && (compWin === playerWin))
+  alert ("GAME IS OVER, the winner is: no one")
 
 
-function results(){
-  
-  if (compWin > playerWin){
-    alert ("You lost!");
-    }
-    
-    else 
-    if (compWin < playerWin)
-    {
-      alert ("You won!")
-    }
-    
-    else 
-    {
-    alert ("It's a tie!!!")
-    }
     }
 
-    console.log(playRound());
-    console.log(results());
+
+

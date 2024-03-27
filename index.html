@@ -1,18 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="myScript.js"></script>
+    <script src="myScript.js" defer></script>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 
 <body>
+  <div id="game">
+    <h1 id="title">Play rock, paper or scissors!</h1>
+    <button class="buttons" id="rock">Rock</button>
+    <button class="buttons" id="paper">Paper</button>
+    <button class="buttons" id="scissors">Scissors</button>
+  </div> 
+
+ <div class="displays"> 
+  <div id="playerText">
+    Player Score:
+  </div>
+
+  <div id="computerText">
+    Computer Score:
+  </div>
   
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
-    
+  
+</div>
 </body>
 
 </html>
+
+
+<!---
+
+
+let computerChoice = Math.random();
+  
+  {
+      if (computerChoice <= 0.33) 
+      {
+      computerChoice = "rock"
+    }
+  
+  else 
+  if (computerChoice <= 0.66) 
+  {
+    computerChoice = "paper"
+  }
+  
+  else
+  if (computerChoice >= 0.67)
+   {
+  computerChoice = "scissors"
+  }
+  }
+
+
+
+  
+else
+if  (playerChoice === "paper" && computerChoice === "scissors") 
+   {
+    alert ("You lose! Scissors beats paper.");
+return ++compWin;
+  }
+
+else
+if (playerChoice === "paper" && computerChoice === "rock") 
+{
+    alert ("You win! Paper beats rock.");
+     return ++playerWin;
+  }
+
+else
+if (playerChoice === "scissors" && computerChoice === "paper")
+{
+    alert ("You win! Scissors beats paper.");
+     return ++playerWin;
+  }
+
+else 
+if
+(playerChoice === "scissors" && computerChoice === "rock") 
+{
+    alert ("You lose! Rock beats scissors.");
+  return ++compWin;
+  }
+
+
+}
+
+
+///////
+
+
+
+
+
+<!--
+function results(){
+
+  
+  
+  if (compWin > playerWin){
+    alert ("You lost!");
+    }
+    
+    else 
+    if (compWin < playerWin)
+    {
+      alert ("You won!")
+    }
+    
+    else 
+    {
+    alert ("It's a tie!!!")
+    }
+    }
+
+    console.log(playRound());
+    console.log(results());
+
+-->
